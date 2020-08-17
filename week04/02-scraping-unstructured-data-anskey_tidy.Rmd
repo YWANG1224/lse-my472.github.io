@@ -139,7 +139,7 @@ And what was the average payment for each department?
 ```{r}
 agg <- data_all %>%
   group_by(dept) %>% # group the data by department
-  summarize(mean_bribe = mean(amount) %>% round(1)) %>% # get the summery statistics
+  summarise(mean_bribe = mean(amount) %>% round(1)) %>% # get the summery statistics
   arrange(-mean_bribe) # order the data by mean bribe amount from largest to smallest
 ## DT will provide a sortable table in knitted document.
 library(DT)
